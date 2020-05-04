@@ -7,11 +7,12 @@ repository from within a Pipeline job. The authentication step may vary between 
 
 If you inject a credential associated with your Git repo, use the Snippet Generator to select the plain `Git` option and it will return a snippet with this gem:
 
-```java
+```groovy
 stage('Checkout') {
        git branch: 'lts-1.532', credentialsId: '82aa2d26-ef4b-4a6a-a05f-2e1090b9ce17', url: 'git@github.com:jenkinsci/maven-plugin.git'
-   }
+}
 ```
+
 This is not ideal - there is an open JIRA,
 https://issues.jenkins-ci.org/browse/JENKINS-28335, for getting the GitPublisher Jenkins functionality working with Pipeline.
 
